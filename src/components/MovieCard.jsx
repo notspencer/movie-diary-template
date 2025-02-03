@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { IMG_URL } from '../data/tmdb';
 
 const MovieCard = ({ original_title, poster_path, id }) => {
@@ -10,7 +11,9 @@ const MovieCard = ({ original_title, poster_path, id }) => {
                 <h2 className='card-title text-4xl'>{original_title}</h2>
 
                 <div className='card-actions justify-end'>
-                    <button className='btn btn-primary'>See Details</button>
+                    <Link to={`/movie/${id}`} className='btn btn-primary'>
+                    See Details
+                    </Link>
                 </div>
             </div>
         </div>
